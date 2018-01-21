@@ -1,0 +1,49 @@
+.combobox a {
+  font-size: 14px;
+}
+
+.spinner input {
+  float: left;
+  width: 61px;
+}
+
+.spinner .btn {
+  position: relative;
+  width: 21px;
+  height: 18px;
+  padding-top: 0;
+  padding-right: 9px;
+  padding-left: 9px;
+}
+
+.spinner .btn.disabled {
+  cursor: not-allowed;
+}
+
+.spinner .spinner-buttons {
+  position: relative;
+  left: -20px;
+  float: left;
+  width: 20px;
+  height: 28px;
+}
+
+.spinner .spinner-up {
+  padding: 0 0 4px 1px;
+}
+
+.spinner .spinner-up i {
+  position: relative;
+  top: -1px;
+}
+
+.spinner .spinner-down {
+  height: 17px;
+  padding: 0 0 4px 1px;
+}
+
+.spinner .spinner-down i {
+  position: relative;
+  left: -1px;
+  top: -1px;
+}
