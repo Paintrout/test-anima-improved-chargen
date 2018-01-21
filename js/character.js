@@ -727,13 +727,29 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
         case "Duk'zarist Nephilim":
             return '+10 to Resistances vs. Dark, Automatically pass between life and death PhR checks, Limited Needs, Sense Light and Dark, Night Vision, Allergic to Metal, -5 XP';
         case 'Ebudan Nephilim':
-            return '+30 to Resistance vs. Forgetfulness and Emotional Control OR (Immune to attacks that cannot damage Energy, Flight Value 12), -3 XP';
+            return '+30 to Resistance vs. Forgetfulness and Emotional Control, After Sue Aman: Immune to natural attacks that cannot damage Energy, Flight Value 12, -3 XP';
         case 'Jayan Nephilim':
             return 'Spiritual Vision, -3 XP';
         case 'Sylvain Nephilim':
             return '+10 to Resistances vs. Light, Sense Light and Dark, Limited Needs, -4 XP';
         case 'Vetala Nephilim':
             return '+50 PhR vs. Criticals, Blood Ecstasy, +1 Regeneration, Photosensitive Skin, Blood Obsession, -20 DR, -3 XP';
+		case "D'Anjayni":
+			return "+50 to Resistances for Avoiding Detection, Can Use Ki Concealment Innately, Forgetfulness: 120 Difficulty, Face of the Spider, Silent Whisper: -80 to overhear D'Ajayni talking, -60 to ability when trying to see bare foot D'Anjayni tracks, -3 XP, +1 Level Modifier";
+		case 'Daimah':
+			return 'Cat-like Body, Sense the Forest, Natural Weapons: +20 Init and 30 Base Damage, Inhumanity in DEX and AGI checks, -1 Size, +9 Regeneration in thick forest or jungle, Resistance to Falling, Immune to Natural Poisons and Diseases, Mandatory Gift, No Movement Penalty in Forest, See the Essence, +1 Level Modifier';
+		case 'Devah':
+			return 'Superior Mind and Soul, +2 to Size, Supernatural Communication, Complex Mind, The Eye of the Soul, +10 to All Summonin Related Checks (Summon, Control, Bind and Banish), -1 STR, -2 CON, -10 PhR, -10 DR, Mandatory Gift or Psychic Access, +2 Level Modifier';
+		case "Duk'zarist":
+			return 'Perfection, Eyes of Fire, Inhumanity in all checks, Sense Light and Dark, Link to Darkness and Fire, +15 to All Resistances, Men get +20 PhR instead of +15, Women get +20 MR instead of +15, Extreme Resistance to Death, +3 Regeneration, Limited Needs, Mandatory Gift or Psychic Access (with Pyrokinesis as first Discipline), Allergy to Metals, +3 Level Modifier';
+		case 'Ebudan':
+			return 'Flight Value 12, Natural Weapons: +20 Init and 60 Base Damage, Wings Work as Shield, After Sue Aman: Reborn as Gnosis 30 spiritual entity or stay in the world and +2 POW and WP either way';
+		case 'Jayan':
+			return '+2 to Size, May not Choose Uncommon Size to Reduce Size, Exceptional Build, +3 Fatigue, +20 PhR, The Third Eye, Natural Weapons: +20 Init and +40 or +60 Base Damage depending on size, Inhumanity in STR checks, -20 MR, -1 POW, +1 Level Modifier';
+		case 'Sylvain':
+			return 'Superhuman Characteristics, +30 to MR and PsR, May not Take Susceptible to Magic or Easily Possessed, Immune to Natural Poisons and Diseases, Inhumanity in all Checks, Limited Needs, +3 Regeneration, Unbalanced Inclination to the Light, Mandatory Gift, -3 XP, +2 Level Modifier';
+		case 'Vetala':
+			return 'Children of the Night, Critical Injury Immunity, Ultrasound, Blood Ecstasy, Rapid Healing, Vulnerable to Light, -2 XP, +2 Level Modifier';
         default:
             return '';
         }
@@ -747,7 +763,7 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
         var gnosis = this.gnosis(),
             advantage = this.Advantages.Regeneration,
             total = tables.regeneration[this.characteristic('CON')];
-        if ($.inArray(this.Race, ["Duk'zarist Nephilim", 'Sylvain Nephilim', 'Vetala Nephilim']) !== -1) {
+        if ($.inArray(this.Race, ["Duk'zarist Nephilim", 'Sylvain Nephilim', 'Vetala Nephilim', 'Vetala']) !== -1) {
             total += 1;
         }
         if (advantage) {
