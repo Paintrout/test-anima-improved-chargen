@@ -68,6 +68,41 @@ function ($, Character, tables) {
             if (name === 'DR') {
                 total -= 20;
             }
+		case 'Devah':
+			if (name === 'PhR' || name === 'DR') {
+				total -= 10;
+			}
+			break;
+		case 'Jayan':
+			if (name === 'PhR') {
+				total +=20;
+			}
+			if (name === 'MR') {
+				total -=20;
+			}
+			break;
+		case 'Sylvain':
+			if (name === 'MR' || name === 'PsR') {
+				total +=30;
+			}
+			if (name === 'DR') {
+				total +=20;
+			}
+			if (name === 'VR') {
+				total +=10;
+			}
+			break;
+		case "Duk'zarist":
+            gender = this.gender();
+            if (name === 'PhR' && gender === 'Male') {
+                total += 20;
+            }
+            else if (name === 'MR' && gender === 'Female') {
+                total += 20;
+            }
+            else {
+                total += 15;
+            }
         }
         if (name === 'PhR' && this.has_ki_ability('Physical Dominion')) {
             total += 10;
