@@ -352,6 +352,30 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
         if (myDisadvantages['Deduct Two Points from a Characteristic'] === name) {
             total -= 2;
         }
+        if (this.Race === 'Jayan' && name === 'STR') {
+            total += 2;
+        }
+        if (this.Race === 'Jayan' && name === 'CON') {
+            total += 1;
+        }
+        if (this.Race === 'Jayan' && name === 'POW') {
+            total -= 1;
+        }
+        if (this.Race === 'Sylvain' && name === 'STR' || this.Race === 'Sylvain' && name === 'CON') {
+            total -= 1;
+        }		
+        if (this.Race === 'Sylvain' && name === 'DEX' || this.Race === 'Sylvain' && name === 'AGI' || this.Race === 'Sylvain' && name === 'POW' || this.Race === 'Sylvain' && name === 'INT') {
+            total += 1;
+        }
+        if (this.Race === 'Daimah' && name === 'WP' || this.Race === 'Daimah' && name === 'CON') {
+            total -= 1;
+        }
+        if (this.Race === 'Daimah' && name === 'DEX' || this.Race === 'Daimah' && name === 'AGI' || this.Race === 'Daimah' && name === 'POW' || this.Race === 'Daimah' && name === 'INT') {
+            total += 1;
+        }
+        if (this.Race === "Duk'zarist" && name === 'DEX' || this.Race === "Duk'zarist" && name === 'AGI' || this.Race === "Duk'zarist" && name === 'POW' || this.Race === "Duk'zarist" && name === 'INT' || this.Race === "Duk'zarist" && name === 'STR' || this.Race === "Duk'zarist" && name === 'CON' || this.Race === "Duk'zarist" && name === 'WP' || this.Race === "Duk'zarist" && name === 'PER') {
+            total += 1;
+        }		
         if (this.Race === 'Jayan Nephilim' && name === 'STR') {
             total += 1;
         }
@@ -737,17 +761,17 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
 		case "D'Anjayni":
 			return "+50 to Resistances for Avoiding Detection, Can Use Ki Concealment Innately, Forgetfulness: 120 Difficulty, Face of the Spider, Silent Whisper: -80 to overhear D'Ajayni talking, -60 to ability when trying to see bare foot D'Anjayni tracks, -3 XP, +1 Level Modifier";
 		case 'Daimah':
-			return 'Cat-like Body, Sense the Forest, Natural Weapons: +20 Init and 30 Base Damage, Inhumanity in DEX and AGI checks, -1 Size, +8 Regeneration in thick forest or jungle, Resistance to Falling, Immune to Natural Poisons and Diseases, Mandatory Gift, No Movement Penalty in Forest, See the Essence, +1 Level Modifier';
+			return 'Sense the Forest, Natural Weapons: +20 Init and 30 Base Damage, Inhumanity in DEX and AGI checks, -1 Size, +8 Regeneration in thick forest or jungle, Resistance to Falling, Immune to Natural Poisons and Diseases, Mandatory Gift, No Movement Penalty in Forest, See the Essence, +1 Level Modifier';
 		case 'Devah':
 			return 'Superior Mind and Soul, +2 to Size, Supernatural Communication, Complex Mind, The Eye of the Soul, +10 to All Summonin Related Checks (Summon, Control, Bind and Banish), -1 STR, -2 CON, Mandatory Gift or Psychic Access, +2 Level Modifier';
 		case "Duk'zarist":
-			return 'Perfection, Eyes of Fire, Inhumanity in all checks, Sense Light and Dark, Link to Darkness and Fire, Extreme Resistance to Death, Limited Needs, Mandatory Gift or Psychic Access, Allergy to Metals, +3 Level Modifier';
+			return 'Eyes of Fire, Inhumanity in all checks, Sense Light and Dark, Link to Darkness and Fire, Extreme Resistance to Death, Limited Needs, Mandatory Gift or Psychic Access, Allergy to Metals, +3 Level Modifier';
 		case 'Ebudan':
 			return 'Flight Value 12, Natural Weapons: +20 Init and 60 Base Damage, Wings Work as Shield, After Sue Aman: Reborn as Gnosis 30 spiritual entity or stay in the world and +2 POW and WP either way';
 		case 'Jayan':
-			return '+2 to Size, May not Choose Uncommon Size to Reduce Size, Exceptional Build, +3 Fatigue, The Third Eye, Natural Weapons: +20 Init and +40 or +60 Base Damage depending on size, Inhumanity in STR checks, -1 POW, +1 Level Modifier';
+			return '+2 to Size, May not Choose Uncommon Size to Reduce Size, May not Reduce STR, +3 Fatigue, The Third Eye, Natural Weapons: +20 Init and +40 or +60 Base Damage depending on size, Inhumanity in STR checks, +1 Level Modifier';
 		case 'Sylvain':
-			return 'Superhuman Characteristics, Immune to Natural Poisons and Diseases, Inhumanity in all Checks, Limited Needs, Unbalanced Inclination to the Light, Mandatory Gift, -3 XP, +2 Level Modifier';
+			return 'Immune to Natural Poisons and Diseases, Inhumanity in all Checks, Limited Needs, Unbalanced Inclination to the Light, Mandatory Gift, -3 XP, +2 Level Modifier';
 		case 'Vetala':
 			return 'Children of the Night, Critical Injury Immunity, Ultrasound, Blood Ecstasy, Rapid Healing, Vulnerable to Light, -2 XP, +2 Level Modifier';
         default:
