@@ -26,6 +26,7 @@ define(['jquery', 'abilities', 'magic_paths',  'psychic_disciplines',
         Artifact: {Category: 'Background', Cost: [1, 2, 3], Options: [], Option_Title: 'Enter the name of the artifact'},
         'Artifact Affinity': {Cost: 1},
         'Been Around': {Category: 'Background', Cost: [1, 2, 3]},
+		'Blood Legacy': {Cost: [1, 2, 3, 4], Options: [], Option_Title: 'Enter name of Blood Legacy'}, //WIP Blood Legacy section!
         'Born Wizard': {Category: 'Magic', Cost: 1},
         Charm: {Cost: 1},
         'Combat Senses': {Cost: 3, Options: tables.primary_combat_abilities, Option_Title: 'Select an ability'},

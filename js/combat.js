@@ -399,6 +399,9 @@ function (Character, classes, martial_arts) {
         if (this.has_ki_ability('Increased Damage') && !('Exelion' in arts)) {
             result += 10;
         }
+        if (this.has_ki_ability('Aura Extension')) {
+            result += 10;
+		}
         return result;
     };
 });

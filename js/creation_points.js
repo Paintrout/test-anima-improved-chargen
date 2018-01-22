@@ -51,7 +51,7 @@ disadvantages, tables, utils) {
             }
             myAdvantages[name].push(params);
         }
-        else if ($.inArray(name, ['Artifact', 'Contacts', 'Elan', 'Powerful Ally']) >= 0) {
+        else if ($.inArray(name, ['Artifact', 'Blood Legacy', 'Contacts', 'Elan', 'Powerful Ally']) >= 0) {
             myAdvantages[name] = {Points: cost, Name: params};
         }
         else if (name === 'Uncommon Size') {
@@ -204,7 +204,7 @@ disadvantages, tables, utils) {
             }
             return true;
         }
-        if ($.inArray(name, ['Increase One Characteristic to Nine', 'Repeat a Characteristics Roll']) !== -1) {
+        if ($.inArray(name, ['Increase One Characteristic to Nine', 'Repeat a Characteristics Roll', 'Blood Legacy']) !== -1) {
             return true;
         }
         if (name in myAdvantages) {
@@ -258,7 +258,7 @@ disadvantages, tables, utils) {
             else if (name === 'Aptitude in a Subject') {
                 result += params.Ability;
             }
-            else if ($.inArray(name, ['Artifact', 'Contacts', 'Elan', 'Powerful Ally']) !== -1) {
+            else if ($.inArray(name, ['Artifact', 'Blood Legacy', 'Contacts', 'Elan', 'Powerful Ally']) !== -1) {
                 result += params.Name;
             }
             else if (name === 'Cultural Roots') {
