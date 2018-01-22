@@ -445,6 +445,16 @@ disadvantages, tables, utils) {
                 return false;
             }
         }
+		else if (myRace === "Duk'zarist") {
+			if ($.inArray(name, ['Atrophied Limb', 'Blind', 'Deafness', 'Mute', 'Nearsighted', 'Serious Illness', 'Sickly', 'Susceptible to Poisons']) !== -1) {
+                return false;
+			}
+		}
+		else if (myRace === 'Sylvain') {
+            if ($.inArray(name, ['Sickly', 'Serious Illness', 'Susceptible to Magic']) !== -1) {
+                return false;
+            }			
+		}
         else if (myRace === 'Sylvain Nephilim') {
             if ($.inArray(name, ['Sickly', 'Serious Illness', 'Susceptible to Magic']) !== -1) {
                 return false;
