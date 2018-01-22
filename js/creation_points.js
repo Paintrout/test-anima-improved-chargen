@@ -147,6 +147,19 @@ disadvantages, tables, utils) {
                 return false;
             }
         }
+		if (name === 'Access to One Psychic Discipline' && parameter) {
+            if (myRace === "Duk'zarist" && parameter !== 'Pyrokinesis') {
+                return false;
+            }
+        }
+        else if (name === 'Elemental Compatibility' && parameter) {
+            if (myRace === "Duk'zarist" && parameter === 'Light') {
+                return false;
+            }
+            else if (myRace === 'Sylvain' && parameter === 'Darkness') {
+                return false;
+            }
+        }
         else if (name === 'Psychic Immunity') {
             if ('Addiction' in myDisadvantages || 'Serious Vice' in myDisadvantages ||
                 'Cowardice' in myDisadvantages || 'Severe Phobia' in myDisadvantages) {
@@ -204,7 +217,7 @@ disadvantages, tables, utils) {
             }
             return true;
         }
-        if ($.inArray(name, ['Increase One Characteristic to Nine', 'Repeat a Characteristics Roll', 'Blood Legacy']) !== -1) {
+        if ($.inArray(name, ['Increase One Characteristic to Nine', 'Repeat a Characteristics Roll']) !== -1) {
             return true;
         }
         if (name in myAdvantages) {
