@@ -379,6 +379,9 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
         if (this.Race === 'Jayan Nephilim' && name === 'STR') {
             total += 1;
         }
+		if (this.Race === "Tuan Dalyr" && name === 'PER') {
+			total += 1;
+		}
         for (i = 0; i < at_level && this.levels.length > i; i++) {
             level = this.levels[i];
             if (level.Characteristic === name) {
@@ -774,6 +777,8 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
 			return 'Immune to Natural Poisons and Diseases, Inhumanity in all Checks, Limited Needs, Unbalanced Inclination to the Light, Mandatory Gift, -3 XP, +2 Level Modifier';
 		case 'Vetala':
 			return 'Children of the Night, Critical Injury Immunity, Ultrasound, Blood Ecstasy, Rapid Healing, Vulnerable to Light, -2 XP, +2 Level Modifier';
+		case "Tuan Dalyr":
+			return 'Natural Weapons: +20 Init and +40 Base damage, Transformation, +40 Notice and Search when Acute Senses taken, Children of the Moon, Animal Traits, +2 Level Modifier';
         default:
             return '';
         }
