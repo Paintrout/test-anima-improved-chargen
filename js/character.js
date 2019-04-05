@@ -705,7 +705,7 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
             }
             multiple = info.DP['Life Point Multiple'];
             if (multiple) {
-                result += multiple * con_mod;
+                result += multiple * this.characteristic('CON');
             }
             // Damage Resistance
             multiple = info.DP['Life Points'];
